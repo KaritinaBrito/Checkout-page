@@ -132,9 +132,6 @@
     padding: 20px;    
     margin-bottom: 20px;
 }
-.information2:focus{
-    color: var(--gray3);
-}
 .checkbox{
     display: flex;
     align-items: baseline;
@@ -244,7 +241,25 @@
 .total-price{
     text-align: right;
 }
-@media (max-width: 650px){
+.footer-container{
+    display: flex;
+    margin-bottom: 0px;
+    left: 0px;
+    right: 0px;
+    justify-content: center;
+    align-items: center;
+    bottom: 0px;
+}   
+.footer-container p{
+    color: #BDBDBD;
+    font-size: 14px;
+    font-family: 'Montserrat', sans-serif;
+}
+.footer-container img{
+    width: 12px;
+    height: 12px;
+}
+@media (max-width: 950px){
      .main-container{
         display: flex;
         flex-direction: column-reverse;
@@ -304,4 +319,16 @@
     .button-submit{
         margin-left: 185px;
     }
+    .footer-container{
+        left: -40px;
+    }   
+    .footer-container p{
+        color: #BDBDBD;
+        font-size: 14px;
+        font-family: 'Montserrat', sans-serif;
+    }
+    .footer-container img{
+        width: 12px;
+        height: 12px;
+    } 
 }
