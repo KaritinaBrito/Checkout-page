@@ -1,0 +1,307 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+
+    --gray1: #333333;
+    --gray2: #4F4F4F;
+    --gray3: #828282;
+    --gray4: #4E5150;
+    --orange: #F2994A;
+}
+.main-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+    margin: 40px;
+    line-height: 2;
+}
+.right-container{
+    display: flex;
+    flex-direction: column;
+}
+.right-container h1{
+    font-size: 36px;
+    color: var(--gray4);
+}
+.right-container h3{
+    font-size: 18px;
+    color: var(--gray1);
+    margin-top: 50px;
+}
+.form-main{
+    display: flex;
+    flex-direction: column;
+}
+.form1, .form2{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.information1{
+    width: 465px;
+    height: 50px;
+    border: 1px solid var(--gray3);
+    border-radius: 10px;
+    font-size: 16px;
+    padding: 20px;    
+    color: var(--gray3);
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+#email{
+    background-image: url('./assets/mail.svg');
+    background-size: 20px 16px;
+    background-repeat: no-repeat;
+    background-position: 10px center;    
+    padding-left: 35px
+}
+#phone{
+    background-image: url('./assets/phone.svg');
+    background-size: 18px 18px;
+    background-repeat: no-repeat;
+    background-position: 10px center; 
+    padding-left: 35px 
+}
+#full-name{
+    background-image: url('./assets/user.svg');
+    background-size: 20px 20px;
+    background-repeat: no-repeat;
+    background-position: 10px center;
+    padding-left: 35px  
+}
+#home{
+    background-image: url('./assets/home.svg');
+    background-size: 18px 17px;
+    background-repeat: no-repeat;
+    background-position: 10px center; 
+    padding-left: 35px 
+}
+#city{
+    background-image: url('./assets/city.svg');
+    background-size: 18px 17px;
+    background-repeat: no-repeat;
+    background-position: 10px center;  
+    padding-left: 35px
+}
+#country{
+    background-image: url('./assets/world.svg');
+    background-size: 20px 20px;
+    background-repeat: no-repeat;
+    background-position: 10px center;  
+    padding-left: 35px
+}
+#postal{
+    background-image: url('./assets/mailbox.svg');
+    background-size: 20px 22px;
+    background-repeat: no-repeat;
+    background-position: 10px center;  
+    padding-left: 35px
+}
+.right-container label{
+    font-size: 12px;
+    color: var(--gray2);
+}
+.form2-country{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.country-form {
+    display: flex;
+    flex-direction: column;
+}
+.form2-country select{
+    padding: 0 0 0 45px;
+}
+
+.postal, .country{
+    display: flex;
+    flex-direction: column;
+}
+.information2{
+    width: 217px;
+    height: 50px;
+    font-size: 16px;
+    color: var(--gray3);
+    border-radius: 10px;
+    border: 1px solid var(--gray3);
+    padding: 20px;    
+    margin-bottom: 20px;
+}
+.information2:focus{
+    color: var(--gray3);
+}
+.checkbox{
+    display: flex;
+    align-items: baseline;
+}
+.checkbox label{
+    margin: 10px;
+}
+.button-submit{
+    width: 166px;
+    height: 50px;
+    color: #ffffff;
+    background: var(--orange);
+    border: none;
+    border-radius: 10px;
+    margin-left: 299px;
+}
+.button-submit:hover{
+    cursor: pointer;
+}
+#save{
+    font-size: 12px;
+    color: var(--gray2);
+    margin-bottom: 30px;
+}
+.left-container{
+    display: flex;
+    flex-direction: column;
+    width: 383px;
+    height: 535px;
+    background: #F2F2F2;
+    justify-content: space-around;
+    align-items: center;    
+    margin-top: -100px;
+}
+.articles{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.article-1{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+.article-1 img{
+    width: 135px;
+    height: 137px;
+    border-radius: 10px;
+}
+.article-information{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.article-information--price{
+    display: grid;
+    grid-template-areas:    "title title"
+                            "price1 price2";
+                            align-items: center;
+}
+.article-information--price h3{
+    grid-column-start: title;
+    grid-column-end: title;
+    color: var(--gray4);
+    font-size: 16px;
+}
+#price-right{
+    grid-column-start: price1;
+    color: var(--orange);
+    font-size: 16px;
+}
+#price-left{
+    grid-column-start: price2;
+    font-size: 12px;
+    color: var(--gray4);
+    text-decoration: line-through;
+}
+.article-information--account{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 134px;
+    height: 52px;
+    border: 1px solid var(--gray3);
+    border-radius: 10px;
+    align-items: center;
+    font-size: 16px;
+}
+.article-information--account button{
+    width: 24px;
+    height: 26px;
+    color: var(--gray3);
+    background: #dddddd;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+}
+.total{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 299px;
+    font-size: 16px;
+}
+.total p{
+    border-top: 1px solid #BDBDBD;
+}
+.total-price{
+    text-align: right;
+}
+@media (max-width: 650px){
+     .main-container{
+        display: flex;
+        flex-direction: column-reverse;
+        margin: 40px;
+        position: relative;
+    }
+    .left-container{
+        width: 350px;
+        height: 489px;
+        margin-top: 60px;
+    }
+    .right-container h1{
+        position: absolute;
+        top: 10px;
+        font-size: 24px;
+    }
+    .right-container,.form1, .form2{
+        width: 350px;
+    }
+    .article-1 img{
+        width: 123px;
+        height: 125px;
+    } 
+    .article-information--price h3{
+        font-size: 12px;
+    }
+    #price-right{
+        font-size: 14px;
+    }
+    #price-left{
+        font-size: 10px;
+    }
+    .article-information--account{
+        width: 123px;
+        height: 50px;
+    }
+    .article-information--account button{
+        width: 22px;
+        height: 22px;
+    }
+    .total{
+        font-size: 14px;
+    }
+    .information1{
+        width: 350px;
+        height: 41px;
+        font-size: 12px;
+    }
+    .information2{
+        width: 163px;
+        height: 41px;
+        font-size: 12px;
+    }    
+    .right-container label, .checkbox {
+        font-size: 10px;
+    }
+    .button-submit{
+        margin-left: 185px;
+    }
+}

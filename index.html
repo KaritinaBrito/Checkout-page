@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Checkout page</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <section class="main-container">
+        <section class="right-container">
+            <h1>Checkout</h1>
+            <h3>Contact infomation</h3>
+
+                <form action="#" method="post" class="form1">
+                    <label for="email">E-mail</label>
+                    <input type="email" name="email" id="email"  placeholder="    Enter your email..."  class="information1" autocomplete required>
+
+                <label for="phone">Phone</label>
+                <input type="text" name="phone" id="phone" placeholder="    Enter your phone..." class="information1" autocomplete required>
+            </form>
+
+            <h3 class="subtitle">Shipping address</h3>
+            <form action="#" method="post" class="form2">
+                <label for="full-name">Full name</label>
+                <input type="text" name="full name" id="full-name" placeholder="    Rodney Cotton" class="information1" autocomplete required>
+
+                <label for="address">Address</label>
+                <input type="text" name="addres" id="home" placeholder="    Your address.." class="information1" autocomplete required>
+                
+                <label for="city">City</label>
+                <input type="text" name="city" id="city" placeholder="    Your city.." class="information1" autocomplete required>
+            </form>
+            <section class="form2-country">
+                <form action="#" method="post" class="country-form">
+                    <label for="country">Country</label>
+                    <select name="country" id="country" class="information2" required>
+                        <option value="mexico">México</option>
+                        <option value="españa">España</option>
+                        <option value="usa">USA</option>
+                    </select>
+                </form>
+                <div class="postal">
+                    <label for="postal">Posstal code</label>
+                    <input type="text" name="postal code" id="postal" placeholder="    Your postal code.." class="information2" required>
+                </div>
+            </section>
+            <div class="checkbox">
+                <input type="checkbox" id="save">
+                <label for="save">Save this information for next time</label>
+            </div>
+            <input type="submit" class="button-submit" value="Continuar" onclick="alert('information sent')"/>
+        </section>
+        <section class="left-container">
+                <section class="articles">
+
+                    <div class="article-1">
+                        <div class="image1">
+                            <img src="./assets/photo1.png" alt="Backpack">
+                        </div>
+                        <div class="article-information">
+                            <div class="article-information--price">
+                                <h3>Vintage Backbag</h3>
+                                <p id="price-right">$54.99</p>
+                                <p id="price-left">$94.99</p>
+                            </div>
+                            <div class="article-information--account">
+                                <button>-</button>
+                                <p>1</p>
+                                <button>+</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="article-1">
+                        <div class="image1">
+                            <img src="./assets/photo2.png" alt="Backpack">
+                        </div>
+                        <div class="article-information">
+                            <div class="article-information--price">
+                                <h3>Levi Shoes</h3>
+                                <p id="price-right">$74.99</p>
+                                <p id="price-left">$124.99</p>
+                            </div>
+                            <div class="article-information--account">
+                                <button>-</button>
+                                <p>1</p>
+                                <button>+</button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="total">
+                    <div class="total-articles">
+                        <p>Shipping</p>
+                        <p>Total</p>
+                    </div>
+                    <div class="total-price">
+                        <p>$19</p>
+                        <p>$148.98</p>
+                    </div>
+                </section>
+        </section>
+    </section>
+</body>
+</html>
