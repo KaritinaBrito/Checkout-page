@@ -31,16 +31,12 @@
     color: var(--gray1);
     margin-top: 50px;
 }
-.form-main{
-    display: flex;
-    flex-direction: column;
-}
-.form1, .form2{
+.form-container{
     display: flex;
     flex-direction: column;
     align-items: flex-start;
 }
-.information1{
+.form__input{
     width: 465px;
     height: 50px;
     border: 1px solid var(--gray3);
@@ -48,8 +44,9 @@
     font-size: 16px;
     padding: 20px;    
     color: var(--gray3);
-    font-size: 16px;
     margin-bottom: 15px;
+    transition: .3s ease all;
+
 }
 
 #email{
@@ -66,14 +63,14 @@
     background-position: 10px center; 
     padding-left: 35px 
 }
-#full-name{
+#fullName{
     background-image: url('./assets/user.svg');
     background-size: 20px 20px;
     background-repeat: no-repeat;
     background-position: 10px center;
     padding-left: 35px  
 }
-#home{
+#address{
     background-image: url('./assets/home.svg');
     background-size: 18px 17px;
     background-repeat: no-repeat;
@@ -101,28 +98,30 @@
     background-position: 10px center;  
     padding-left: 35px
 }
-.right-container label{
+.form-label{
     font-size: 12px;
     color: var(--gray2);
+    margin-bottom: 5px;
 }
-.form2-country{
+.form-container--country{
     display: flex;
-    justify-content: space-between;
     align-items: center;
 }
-.country-form {
+#form__country{
     display: flex;
     flex-direction: column;
+    justify-content: space-around;
 }
-.form2-country select{
+.form-country select{
     padding: 0 0 0 45px;
+    margin: -5px 35px 0 0;
 }
 
 .postal, .country{
     display: flex;
     flex-direction: column;
 }
-.information2{
+.form__input-2{
     width: 217px;
     height: 50px;
     font-size: 16px;
@@ -131,15 +130,28 @@
     border: 1px solid var(--gray3);
     padding: 20px;    
     margin-bottom: 20px;
+    transition: .3s ease all;
+}
+.form__input:focus, .form__input-2:focus{
+    border: 1px solid var(--orange);
+    outline: none;
 }
 .checkbox{
     display: flex;
-    align-items: baseline;
+    align-items: baseline;   
+}
+.checkbox input{
+    width: 21px;
+    height: 21px;
+    border-radius: 5px;
+    border: 1px solid var(--gray3);
 }
 .checkbox label{
     margin: 10px;
+    font-size: 12px;
+    color: var(--gray2);
 }
-.button-submit{
+.btn-submit button{
     width: 166px;
     height: 50px;
     color: #ffffff;
@@ -148,14 +160,27 @@
     border-radius: 10px;
     margin-left: 299px;
 }
-.button-submit:hover{
+.btn-submit button:hover{
     cursor: pointer;
+    box-shadow: 3px 0 30px rgba(163,163,163, 1);
 }
-#save{
-    font-size: 12px;
-    color: var(--gray2);
-    margin-bottom: 30px;
+.formulario__input-error{
+    margin-top: -10px;
+    font-size: 10px;
+
+    color: #c51d1d;
+    display: none;
 }
+.formulario__input-error-active{
+    display: block;
+}
+.form-inputs-error{
+    border: 1px solid #c51d1d;
+}
+.form-inputs-succes{
+    border: 1px solid #0A6EBD;
+}
+
 .left-container{
     display: flex;
     flex-direction: column;
@@ -164,7 +189,7 @@
     background: #F2F2F2;
     justify-content: space-around;
     align-items: center;    
-    margin-top: -100px;
+    margin-top: -350px;
 }
 .articles{
     display: flex;
@@ -260,7 +285,7 @@
     height: 12px;
 }
 @media (max-width: 950px){
-     .main-container{
+    .main-container{
         display: flex;
         flex-direction: column-reverse;
         margin: 40px;
@@ -276,7 +301,7 @@
         top: 10px;
         font-size: 24px;
     }
-    .right-container,.form1, .form2{
+    .right-container,.form-container{
         width: 350px;
     }
     .article-1 img{
@@ -303,21 +328,34 @@
     .total{
         font-size: 14px;
     }
-    .information1{
+    .form__input{
         width: 350px;
         height: 41px;
         font-size: 12px;
     }
-    .information2{
+    .form__input-2{
         width: 163px;
         height: 41px;
         font-size: 12px;
     }    
+    .form-container--country{
+        align-items: flex-start;
+    }
+    .form-country label{
+        margin-top: 10px;
+    }
+    .form-country select{
+        margin-top: 7px;
+    }
     .right-container label, .checkbox {
         font-size: 10px;
+        margin-bottom: 0;
     }
-    .button-submit{
-        margin-left: 185px;
+    .btn-submit{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        width: 360px;
     }
     .footer-container{
         left: -40px;
