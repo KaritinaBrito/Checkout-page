@@ -39,7 +39,7 @@
 <img src="./assets/checkoutDesktop.png"/>
 <img src="./assets/checkoutMobile.png"/>
 
-Page with responsive design based on given design
+Page with responsive design based on a given layout and field validation
 
 ### Built With
 
